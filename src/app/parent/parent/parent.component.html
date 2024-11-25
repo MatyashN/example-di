@@ -1,0 +1,11 @@
+PROVIDE ( emoji: '🐶' )<br>
+VIEWPROVIDERS ( emoji: '🦔' )!!!!!!!<br>
+
+<ng-content></ng-content>
+
+<app-child type="normal" appZoo></app-child>
+
+Normal inject: {{ normalAnimal?.emoji }}<br>
+host inject: {{ hostAnimal?.emoji }}<br>
+host skipSelf inject: {{ hostSkipSelfAnimal?.emoji }}<br>
+self inject: {{ selfAnimal?.emoji }}<br>

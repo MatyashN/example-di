@@ -1,0 +1,10 @@
+PROVIDE ( emoji: '🦊' )<br>
+VIEWPROVIDERS ( emoji: '🐻' )<br>
+
+{{ type() }}
+<code>
+  Normal inject: {{ normalAnimal?.emoji }}<br>
+  host inject: {{ hostAnimal?.emoji }}<br>
+  host skipSelf inject: {{ hostSkipSelfAnimal?.emoji }}<br>
+  self inject: {{ selfAnimal?.emoji }}<br>
+</code>

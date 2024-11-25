@@ -1,8 +1,15 @@
 import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { provideRouter, withComponentInputBinding } from '@angular/router';
 
 import { routes } from './app.routes';
+import { AnimalService } from './animal.service';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes)]
+  providers: [
+    {
+      provide: AnimalService, useValue: { emoji: '🦄' }
+    },
+    provideZoneChangeDetection( { eventCoalescing: true } ),
+    provideRouter( routes, withComponentInputBinding() ),
+  ],
 };
